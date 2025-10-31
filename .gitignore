@@ -10,7 +10,6 @@ __pycache__/
 
 # Local configuration
 .env
-.env.*
 watch_rules.json
 watch_rules.yaml
 watcher_state.json
