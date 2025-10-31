@@ -1,0 +1,19 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Local configuration
+.env
+.env.*
+watch_rules.json
+watch_rules.yaml
+watcher_state.json
+
+# Credentials & secrets
+credentials/

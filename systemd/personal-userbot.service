@@ -1,0 +1,22 @@
+[Unit]
+Description=Personal Userbot - Keyword Watcher
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# Ganti nilai User, WorkingDirectory, Environment, dan ExecStart sesuai lokasi instalasi
+User=REPLACE_WITH_USERNAME
+WorkingDirectory=REPLACE_WITH_PROJECT_ROOT
+# Pastikan EnvironmentFile menunjuk ke .env yang berisi credential.
+Environment="PYTHONPATH=REPLACE_WITH_PROJECT_ROOT/src"
+EnvironmentFile=REPLACE_WITH_PROJECT_ROOT/.env
+# Environment="LOG_FILE=/var/log/personal-userbot/personal-userbot.log"  # Opsional, override lokasi log file
+ExecStart=REPLACE_WITH_PROJECT_ROOT/.venv/bin/python -m personal_userbot.runner
+Restart=always
+RestartSec=5
+KillSignal=SIGINT
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target
